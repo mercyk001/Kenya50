@@ -1,0 +1,39 @@
+{
+    "cards": [
+      {
+        "id": 1,
+        "name": "Lion",
+        "description": "The king of the jungle. Symbolizes strength and bravery.",
+        "points": 10,
+        "category": "Animal"
+      },
+      {
+        "id": 2,
+        "name": "Elephant",
+        "description": "The largest land animal. Represents wisdom and memory.",
+        "points": 8,
+        "category": "Animal"
+      },
+      {
+        "id": 3,
+        "name": "Giraffe",
+        "description": "The tallest animal. Symbolizes vision and foresight.",
+        "points": 7,
+        "category": "Animal"
+      },
+      {
+        "id": 4,
+        "name": "Rhino",
+        "description": "A powerful creature. Represents protection and stability.",
+        "points": 9,
+        "category": "Animal"
+      },
+      {
+        "id": 5,
+        "name": "Leopard",
+        "description": "A stealthy predator. Symbolizes agility and cunning.",
+        "points": 6,
+        "category": "Animal"
+      }
+    ]
+  }
