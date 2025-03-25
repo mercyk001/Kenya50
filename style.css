@@ -1,9 +1,13 @@
 body {
     font-family: Arial, sans-serif;
     background: linear-gradient(to bottom, #000 33.33%, #d52b1e 33.33%, #d52b1e 66.67%, #00843d 66.67%, #00843d 100%);
-    
     color: #000;
     text-align: center;
+}
+
+body.dark-mode {
+    background: linear-gradient(to bottom, #2b2b2b 33.33%, #b71c1c 33.33%, #b71c1c 66.67%, #004d40 66.67%, #004d40 100%);
+    color: #fff;
 }
 
 .container {
@@ -33,10 +37,26 @@ button {
 }
 
 button:hover {
-    background-color: #a61e14; /
+    background-color: #a61e14; 
 }
 
 #timer {
     font-size: 24px;
     margin-top: 20px;
+}
+
+body.dark-mode .container {
+    background-color: #2b2b2b;
+}
+
+body.dark-mode .player {
+    background-color: #004d40;
+}
+
+body.dark-mode button {
+    background-color: #b71c1c;
+}
+
+body.dark-mode button:hover {
+    background-color: #8e0000;
 }
