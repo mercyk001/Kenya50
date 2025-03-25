@@ -1,7 +1,7 @@
 body {
     font-family: Arial, sans-serif;
     background: linear-gradient(to bottom, #000 33.33%, #d52b1e 33.33%, #d52b1e 66.67%, #00843d 66.67%, #00843d 100%);
-    /* Black, Red, Green stripes */
+    
     color: #000;
     text-align: center;
 }
@@ -20,11 +20,11 @@ body {
     padding: 10px;
     border: 2px solid #fff;
     border-radius: 10px;
-    background-color: #00843d; /* Green */
+    background-color: #00843d; 
 }
 
 button {
-    background-color: #d52b1e; /* Red */
+    background-color: #d52b1e; 
     color: #fff;
     border: none;
     padding: 10px 20px;
@@ -33,7 +33,7 @@ button {
 }
 
 button:hover {
-    background-color: #a61e14; /* Darker Red */
+    background-color: #a61e14; /
 }
 
 #timer {
