@@ -1,39 +1,363 @@
 {
-    "cards": [
-      {
-        "id": 1,
-        "name": "Lion",
-        "description": "The king of the jungle. Symbolizes strength and bravery.",
-        "points": 10,
-        "category": "Animal"
-      },
-      {
-        "id": 2,
-        "name": "Elephant",
-        "description": "The largest land animal. Represents wisdom and memory.",
-        "points": 8,
-        "category": "Animal"
-      },
-      {
-        "id": 3,
-        "name": "Giraffe",
-        "description": "The tallest animal. Symbolizes vision and foresight.",
-        "points": 7,
-        "category": "Animal"
-      },
-      {
-        "id": 4,
-        "name": "Rhino",
-        "description": "A powerful creature. Represents protection and stability.",
-        "points": 9,
-        "category": "Animal"
-      },
-      {
-        "id": 5,
-        "name": "Leopard",
-        "description": "A stealthy predator. Symbolizes agility and cunning.",
-        "points": 6,
-        "category": "Animal"
-      }
-    ]
-  }
+  "questions": [
+    {
+      "id": 1,
+      "category": "History",
+      "question": "In what year did Kenya gain independence?",
+      "options": [
+        "1960",
+        "1963",
+        "1965",
+        "1970"
+      ],
+      "correctAnswer": "1963",
+      "points": 10,
+      "difficulty": "easy"
+    },
+    {
+      "id": 2,
+      "category": "Politics",
+      "question": "Who was Kenya's first president?",
+      "options": [
+        "Jomo Kenyatta",
+        "Daniel arap Moi",
+        "Uhuru Kenyatta",
+        "Mwai Kibaki"
+      ],
+      "correctAnswer": "Jomo Kenyatta",
+      "points": 15,
+      "difficulty": "medium"
+    },
+    {
+      "id": 3,
+      "category": "Culture",
+      "question": "What is the national language of Kenya?",
+      "options": [
+        "Swahili",
+        "English",
+        "Kikuyu",
+        "Both Swahili and English"
+      ],
+      "correctAnswer": "Both Swahili and English",
+      "points": 10,
+      "difficulty": "easy"
+    },
+    {
+      "id": 4,
+      "category": "Wildlife",
+      "question": "Which national park is Kenya most famous for wildlife migration?",
+      "options": [
+        "Tsavo National Park",
+        "Aberdare National Park",
+        "Maasai Mara National Reserve",
+        "Lake Nakuru National Park"
+      ],
+      "correctAnswer": "Maasai Mara National Reserve",
+      "points": 15,
+      "difficulty": "medium"
+    },
+    {
+      "id": 5,
+      "category": "Economy",
+      "question": "What is Kenya's largest economic sector?",
+      "options": [
+        "Tourism",
+        "Agriculture",
+        "Manufacturing",
+        "Technology"
+      ],
+      "correctAnswer": "Agriculture",
+      "points": 20,
+      "difficulty": "hard"
+    },
+    {
+      "id": 6,
+      "category": "Geography",
+      "question": "What is the capital city of Kenya?",
+      "options": [
+        "Mombasa",
+        "Nairobi",
+        "Kisumu",
+        "Nakuru"
+      ],
+      "correctAnswer": "Nairobi",
+      "points": 10,
+      "difficulty": "easy"
+    },
+    {
+      "id": 7,
+      "category": "Culture",
+      "question": "Which ethnic group is the largest in Kenya?",
+      "options": [
+        "Kikuyu",
+        "Luo",
+        "Kalenjin",
+        "Maasai"
+      ],
+      "correctAnswer": "Kikuyu",
+      "points": 15,
+      "difficulty": "medium"
+    },
+    {
+      "id": 8,
+      "category": "Sports",
+      "question": "What sport are Kenyan athletes most famous for?",
+      "options": [
+        "Football",
+        "Cricket",
+        "Long-distance running",
+        "Basketball"
+      ],
+      "correctAnswer": "Long-distance running",
+      "points": 10,
+      "difficulty": "easy"
+    },
+    {
+      "id": 9,
+      "category": "Technology",
+      "question": "What innovative mobile money service originated in Kenya?",
+      "options": [
+        "Google Pay",
+        "M-Pesa",
+        "Apple Pay",
+        "PayPal"
+      ],
+      "correctAnswer": "M-Pesa",
+      "points": 15,
+      "difficulty": "medium"
+    },
+    {
+      "id": 10,
+      "category": "Environment",
+      "question": "Who was the first African woman to win the Nobel Peace Prize?",
+      "options": [
+        "Wangari Maathai",
+        "Ellen Johnson Sirleaf",
+        "Ngozi Okonjo-Iweala",
+        "Chimamanda Ngozi Adichie"
+      ],
+      "correctAnswer": "Wangari Maathai",
+      "points": 20,
+      "difficulty": "hard"
+    },
+    {
+      "id": 11,
+      "category": "History",
+      "question": "Which colonial power ruled Kenya before independence?",
+      "options": [
+        "France",
+        "Portugal",
+        "Germany",
+        "Britain"
+      ],
+      "correctAnswer": "Britain",
+      "points": 15,
+      "difficulty": "medium"
+    },
+    {
+      "id": 12,
+      "category": "Geography",
+      "question": "What is the highest mountain in Kenya?",
+      "options": [
+        "Mount Elgon",
+        "Mount Kenya",
+        "Kilimanjaro",
+        "Mount Meru"
+      ],
+      "correctAnswer": "Mount Kenya",
+      "points": 10,
+      "difficulty": "easy"
+    },
+    {
+      "id": 13,
+      "category": "Wildlife",
+      "question": "Which of these animals is NOT typically found in Kenyan national parks?",
+      "options": [
+        "Lion",
+        "Elephant",
+        "Giraffe",
+        "Polar Bear"
+      ],
+      "correctAnswer": "Polar Bear",
+      "points": 15,
+      "difficulty": "medium"
+    },
+    {
+      "id": 14,
+      "category": "Culture",
+      "question": "What is the traditional dress of the Maasai people?",
+      "options": [
+        "Dashiki",
+        "Kanga",
+        "Shuka",
+        "Kitenge"
+      ],
+      "correctAnswer": "Shuka",
+      "points": 10,
+      "difficulty": "easy"
+    },
+    {
+      "id": 15,
+      "category": "Economy",
+      "question": "What is a major export crop of Kenya?",
+      "options": [
+        "Coffee",
+        "Wheat",
+        "Rice",
+        "Corn"
+      ],
+      "correctAnswer": "Coffee",
+      "points": 15,
+      "difficulty": "medium"
+    },
+    {
+      "id": 16,
+      "category": "Politics",
+      "question": "How many counties does Kenya have?",
+      "options": [
+        "42",
+        "47",
+        "54",
+        "36"
+      ],
+      "correctAnswer": "47",
+      "points": 20,
+      "difficulty": "hard"
+    },
+    {
+      "id": 17,
+      "category": "Technology",
+      "question": "Kenya is often referred to as the 'Silicon' what?",
+      "options": [
+        "Silicon Valley",
+        "Silicon Savannah",
+        "Silicon Desert",
+        "Silicon Mountain"
+      ],
+      "correctAnswer": "Silicon Savannah",
+      "points": 15,
+      "difficulty": "medium"
+    },
+    {
+      "id": 18,
+      "category": "Sports",
+      "question": "Which Kenyan long-distance runner is considered legendary?",
+      "options": [
+        "Usain Bolt",
+        "Eliud Kipchoge",
+        "Mo Farah",
+        "Paul Tergat"
+      ],
+      "correctAnswer": "Eliud Kipchoge",
+      "points": 10,
+      "difficulty": "easy"
+    },
+    {
+      "id": 19,
+      "category": "Environment",
+      "question": "What percentage of Kenya is covered by forest?",
+      "options": [
+        "5.9%",
+        "12.13%",
+        "3.4%",
+        "8.7%"
+      ],
+      "correctAnswer": "12.13%",
+      "points": 20,
+      "difficulty": "hard"
+    },
+    {
+      "id": 20,
+      "category": "History",
+      "question": "In what year did Kenya become a republic?",
+      "options": [
+        "1963",
+        "1964",
+        "1965",
+        "1967"
+      ],
+      "correctAnswer": "1964",
+      "points": 15,
+      "difficulty": "medium"
+    },
+    {
+      "id": 21,
+      "category": "Culture",
+      "question": "What is the traditional greeting in Swahili?",
+      "options": [
+        "Bonjour",
+        "Jambo",
+        "Hola",
+        "Hello"
+      ],
+      "correctAnswer": "Jambo",
+      "points": 10,
+      "difficulty": "easy"
+    },
+    {
+      "id": 22,
+      "category": "Geography",
+      "question": "Which ocean borders Kenya?",
+      "options": [
+        "Atlantic Ocean",
+        "Indian Ocean",
+        "Pacific Ocean",
+        "Arctic Ocean"
+      ],
+      "correctAnswer": "Indian Ocean",
+      "points": 15,
+      "difficulty": "medium"
+    },
+    {
+      "id": 23,
+      "category": "Wildlife",
+      "question": "Which of these is the national animal of Kenya?",
+      "options": [
+        "Lion",
+        "Elephant",
+        "Giraffe",
+        "Zebra"
+      ],
+      "correctAnswer": "Lion",
+      "points": 10,
+      "difficulty": "easy"
+    },
+    {
+      "id": 24,
+      "category": "Economy",
+      "question": "What is Kenya's currency?",
+      "options": [
+        "Shilling",
+        "Dollar",
+        "Euro",
+        "Rand"
+      ],
+      "correctAnswer": "Shilling",
+      "points": 15,
+      "difficulty": "medium"
+    },
+    {
+      "id": 25,
+      "category": "Politics",
+      "question": "Who is the current President of Kenya as of 2024?",
+      "options": [
+        "Uhuru Kenyatta",
+        "Daniel arap Moi",
+        "William Ruto",
+        "Raila Odinga"
+      ],
+      "correctAnswer": "William Ruto",
+      "points": 20,
+      "difficulty": "hard"
+    }
+  ],
+  "players": [
+    {
+      "id": 1,
+      "name": "Guest Player",
+      "totalScore": 0,
+      "gamesPlayed": 0,
+      "highestScore": 0
+    }
+  ]
+}
