@@ -1,10 +1,12 @@
 document.addEventListener('DOMContentLoaded', function() {
     let player1Score = 0;
     let player2Score = 0;
-    let currentPlayer = 1;
+    let currentPlayer = 1; //making player to start 
     let timer;
     let timeLeft = 30;
 
+
+    //getting elements by id fromhtmlfile
     const drawCard1Button = document.getElementById('drawCard1');
     const drawCard2Button = document.getElementById('drawCard2');
     const card1Div = document.getElementById('card1');
@@ -17,7 +19,9 @@ document.addEventListener('DOMContentLoaded', function() {
     const darkModeToggle = document.getElementById('darkModeToggle');
 
     console.log('Adding event listeners to buttons');
-    drawCard1Button.addEventListener('click', () => {
+
+
+    drawCard1Button.addEventListener('click', () => { //eventlistener for drawbutton1
         if (currentPlayer === 1) {
             console.log('Draw Card 1 button clicked');
             drawCard(1);
@@ -25,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function() {
             alert("It's Player 2's turn!");
         }
     });
-    drawCard2Button.addEventListener('click', () => {
+    drawCard2Button.addEventListener('click', () => { //ya palyer2
         if (currentPlayer === 2) {
             console.log('Draw Card 2 button clicked');
             drawCard(2);
@@ -34,7 +38,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // Add event listener for dark mode toggle
+    // Additional to change btwn dark na light.
     darkModeToggle.addEventListener('change', () => {
         document.body.classList.toggle('dark-mode');
     });
@@ -61,7 +65,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function drawCard(player) {
         console.log(`Drawing card for player ${player}`);
-        fetch('http://localhost:3000/questions')
+        fetch('http://localhost:3000/questions')  //API fetching questions from the db.json
             .then(response => {
                 if (!response.ok) {
                     throw new Error('Network response was not ok');
@@ -71,7 +75,7 @@ document.addEventListener('DOMContentLoaded', function() {
             .then(data => {
                 console.log('Fetched questions:', data);
                 const randomIndex = Math.floor(Math.random() * data.length);
-                const card = data[randomIndex];
+                const card = data[randomIndex]; //picks randomly, haifuatilii any order
                 displayCard(card, player);
                 createAnswerOptions(card, player);
                 if (player === currentPlayer) {
@@ -83,10 +87,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function displayCard(card, player) {
         const cardDiv = player === 1 ? card1Div : card2Div;
-        cardDiv.innerHTML = `<h3>${card.question}</h3>`;
+        cardDiv.innerHTML = `<h3>${card.question}</h3>`; //display the question
     }
 
-    function createAnswerOptions(card, player) {
+    function createAnswerOptions(card, player) { //siplays multiple options
         const answerOptionsDiv = player === 1 ? answerOptions1Div : answerOptions2Div;
         answerOptionsDiv.innerHTML = '';
 
@@ -111,7 +115,7 @@ document.addEventListener('DOMContentLoaded', function() {
     function submitAnswer(correctAnswer, player) {
         const selectedOption = document.querySelector(`input[name="answer${player}"]:checked`);
         if (selectedOption) {
-            stopTimer();
+            stopTimer(); //timre stopsna kurest when the ans is submitted.
             if (selectedOption.value === correctAnswer) {
                 if (player === 1) {
                     player1Score += 10;
@@ -121,7 +125,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     score2Div.textContent = `Score: ${player2Score}`;
                 }
             }
-            switchPlayer();
+            switchPlayer(); //switch and timer starts again.
             startTimer();
         } else {
             alert("Please select an answer before submitting.");
