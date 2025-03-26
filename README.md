@@ -21,3 +21,13 @@ The Kenya 50 Card Game is a Single Page Application (SPA) built using HTML, CSS,
 2. scoring
 3. Progression
 4. Save Progress.
+
+
+## References.
+1. https://stackoverflow.com/questions/34896106/attach-event-to-dynamic-elements-in-javascript
+
+2. https://stackoverflow.com/questions/5978519/how-can-i-use-setinterval-and-clearinterval
+
+3. https://www.w3schools.com/jsref/dom_obj_radio.asp
+
+4. https://www.javascripttutorial.net/javascript-dom/javascript-radio-button/
