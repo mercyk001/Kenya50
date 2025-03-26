@@ -74,6 +74,9 @@ document.addEventListener('DOMContentLoaded', function() {
             })
             .then(data => {
                 console.log('Fetched questions:', data);
+
+                //so this is where the functionality of picking random question happens...i.e generates random index withinthe bounds of the array in the db.json file
+                
                 const randomIndex = Math.floor(Math.random() * data.length);
                 const card = data[randomIndex]; //picks randomly, haifuatilii any order
                 displayCard(card, player);
