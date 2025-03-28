@@ -1,11 +1,11 @@
 document.addEventListener('DOMContentLoaded', function() {
     let player1Score = 0;
     let player2Score = 0;
-    let currentPlayer = 1; //making player to start 
+    let currentPlayer = 1; 
     let timer;
     let timeLeft = 30;
 
-    //getting elements by id from html file
+   
     const drawCard1Button = document.getElementById('drawCard1');
     const drawCard2Button = document.getElementById('drawCard2');
     const card1Div = document.getElementById('card1');
@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     console.log('Adding event listeners to buttons');
 
-    drawCard1Button.addEventListener('click', () => { //event listener for draw button 1
+    drawCard1Button.addEventListener('click', () => { 
         if (currentPlayer === 1) {
             console.log('Draw Card 1 button clicked');
             drawCard(1);
@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    drawCard2Button.addEventListener('click', () => { //for player 2
+    drawCard2Button.addEventListener('click', () => { 
         if (currentPlayer === 2) {
             console.log('Draw Card 2 button clicked');
             drawCard(2);
@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // Additional to change between dark and light mode.
+   
     darkModeToggle.addEventListener('change', () => {
         document.body.classList.toggle('dark-mode');
     });
@@ -64,7 +64,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function drawCard(player) {
         console.log(`Drawing card for player ${player}`);
-        fetch('http://localhost:3000/questions')  //API fetching questions from the db.json
+        fetch('http://localhost:3000/questions')  
             .then(response => {
                 if (!response.ok) {
                     throw new Error('Network response was not ok');
@@ -74,9 +74,9 @@ document.addEventListener('DOMContentLoaded', function() {
             .then(data => {
                 console.log('Fetched questions:', data);
 
-                // Generate a random index within the bounds of the array in the db.json file
+               
                 const randomIndex = Math.floor(Math.random() * data.length);
-                const card = data[randomIndex]; //picks randomly
+                const card = data[randomIndex]; 
                 displayCard(card, player);
                 createAnswerOptions(card, player);
                 if (player === currentPlayer) {
@@ -88,10 +88,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function displayCard(card, player) {
         const cardDiv = player === 1 ? card1Div : card2Div;
-        cardDiv.innerHTML = `<h3>${card.question}</h3>`; //display the question
+        cardDiv.innerHTML = `<h3>${card.question}</h3>`; 
     }
 
-    function createAnswerOptions(card, player) { //displays multiple options
+    function createAnswerOptions(card, player) { 
         const answerOptionsDiv = player === 1 ? answerOptions1Div : answerOptions2Div;
         answerOptionsDiv.innerHTML = '';
 
@@ -111,7 +111,7 @@ document.addEventListener('DOMContentLoaded', function() {
         submitButton.textContent = 'Submit Answer';
         submitButton.addEventListener('click', () => {
             submitAnswer(card.correctAnswer, player);
-            saveGameState(); // Save the game state after submitting an answer
+            saveGameState(); 
         });
         answerOptionsDiv.appendChild(submitButton);
     }
@@ -119,7 +119,7 @@ document.addEventListener('DOMContentLoaded', function() {
     function submitAnswer(correctAnswer, player) {
         const selectedOption = document.querySelector(`input[name="answer${player}"]:checked`);
         if (selectedOption) {
-            stopTimer(); //timer stops and resets when the answer is submitted.
+            stopTimer(); 
             if (selectedOption.value === correctAnswer) {
                 if (player === 1) {
                     player1Score += 10;
@@ -129,7 +129,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     score2Div.textContent = `Score: ${player2Score}`;
                 }
             }
-            switchPlayer(); //switch and timer starts again.
+            switchPlayer();
             startTimer();
         } else {
             alert("Please select an answer before submitting.");
@@ -165,7 +165,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    // Call loadGameState when the document is loaded
     loadGameState();
     startTimer();
 });
