@@ -5,7 +5,6 @@ document.addEventListener('DOMContentLoaded', function() {
     let timer;
     let timeLeft = 30;
 
-   
     const drawCard1Button = document.getElementById('drawCard1');
     const drawCard2Button = document.getElementById('drawCard2');
     const card1Div = document.getElementById('card1');
@@ -37,7 +36,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-   
     darkModeToggle.addEventListener('change', () => {
         document.body.classList.toggle('dark-mode');
     });
@@ -64,7 +62,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function drawCard(player) {
         console.log(`Drawing card for player ${player}`);
-        fetch('http://localhost:3000/questions')  
+        fetch('https://my-json-server.typicode.com/mercyk001/Kenya50/questions')  
             .then(response => {
                 if (!response.ok) {
                     throw new Error('Network response was not ok');
@@ -74,7 +72,6 @@ document.addEventListener('DOMContentLoaded', function() {
             .then(data => {
                 console.log('Fetched questions:', data);
 
-               
                 const randomIndex = Math.floor(Math.random() * data.length);
                 const card = data[randomIndex]; 
                 displayCard(card, player);
